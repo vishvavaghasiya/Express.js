@@ -21,51 +21,6 @@
 // });
 
 
-// ------------------lec_4------------------
-
-// const express = require("express");
-// const morgan = require("morgan");
-// const app = express();
-// const users = require("./dummy.json");
-// // console.log(users);
-
-// app.use(morgan("dev"));
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: false }));
-
-// app.get("/", (req , res) => {
-//     res.send("welcome to epress server");
-// });
-
-// // CRUD
-// // Creat User
-// app.post("/user", (req , res) => {
-//     //  console.log(req.body);
-//     users.push(req.body);
-//     res.json({message: "user added success" });
-// });
-
-// // READ - get all users
-// app.get("/user", (req, res) => {
-//     res.json(users);
-// });
-
-// // get single user
-// app.get("/user/:id", (req, res) => {
-//     let id = +req.params.id;
-//     let item = users.find((user)=>user.id === id)
-//     res.json(item);
-// });
-
-// app.listen(2006, () => {
-//     console.log(`server start at http://localhost:2006`);   
-// });
-
-
-
-
-
-
 
 // ----------------------------------------------- lec_2
 
@@ -288,37 +243,80 @@
 
 
 
-// static express
-const express = require('express');
-const server = express();
+// // static express
+// const express = require('express');
+// const server = express();
 
-server.use(express.urlencoded({extended:false}));
-server.use("/hello",express.static('public'));   // create folder named public then  create one file in that folder and apply routes in url
+// server.use(express.urlencoded({extended:false}));
+// server.use("/hello",express.static('public'));   // create folder named public then  create one file in that folder and apply routes in url
 
-const myFun = (req,res,next) => {
-    console.log(req.body);              
-    next();
-}
+// const myFun = (req,res,next) => {
+//     console.log(req.body);              
+//     next();
+// }
 
-server.get("/" ,(req,res) =>{
-    res.write("Welcome to expressJS")
-    res.end();
-})
+// server.get("/" ,(req,res) =>{
+//     res.write("Welcome to expressJS")
+//     res.end();
+// })
 
-server.get("/login",myFun ,(req,res) =>{
-    res.write("Welcome to loginPAGE.")
-    res.end();
-})
+// server.get("/login",myFun ,(req,res) =>{
+//     res.write("Welcome to loginPAGE.")
+//     res.end();
+// })
 
-server.post("/", (req,res) =>{
-    res.setHeader('Content-type', "application/json" )
-    res.write("Welcome to expressJS post ")
-    res.end();
-})
+// server.post("/", (req,res) =>{
+//     res.setHeader('Content-type', "application/json" )
+//     res.write("Welcome to expressJS post ")
+//     res.end();
+// })
 
-server.listen(1122, () => {
-    console.log('Server running at http://localhost:1122');
-});
+// server.listen(1122, () => {
+//     console.log('Server running at http://localhost:1122');
+// });
+
+
+
+
+// ------------------lec_4------------------
+
+// const express = require("express");
+// const morgan = require("morgan");
+// const app = express();
+// const users = require("./dummy.json");
+// // console.log(users);
+
+// app.use(morgan("dev"));
+// app.use(express.json());
+// app.use(express.urlencoded({ extended: false }));
+
+// app.get("/", (req , res) => {
+//     res.send("welcome to epress server");
+// });
+
+// // CRUD
+// // Creat User
+// app.post("/user", (req , res) => {
+//     //  console.log(req.body);
+//     users.push(req.body);
+//     res.json({message: "user added success" });
+// });
+
+// // READ - get all users
+// app.get("/user", (req, res) => {
+//     res.json(users);
+// });
+
+// // get single user
+// app.get("/user/:id", (req, res) => {
+//     let id = +req.params.id;
+//     let item = users.find((user)=>user.id === id)
+//     res.json(item);
+// });
+
+// app.listen(2006, () => {
+//     console.log(`server start at http://localhost:2006`);   
+// });
  
 
 
