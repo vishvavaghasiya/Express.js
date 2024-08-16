@@ -4,9 +4,9 @@ const {
     addNewUser,
     getAllusers,
     getuser,
-    replaceuser,
-    updateuser,
-    deleteuser
+    // replaceuser,
+    // updateuser,
+    // deleteuser
 } = require("../controller/user.controller");
 
 userRoutes.post("/", addNewUser);
@@ -15,10 +15,10 @@ userRoutes.get("/", getAllusers);
 
 userRoutes.get("/:id", getuser);
 
-userRoutes.put("/:id", replaceuser);
+// userRoutes.put("/:id", replaceuser);
 
-userRoutes.patch("/:id", updateuser);
+// userRoutes.patch("/:id", updateuser);
 
-userRoutes.delete("/:id", deleteuser);
+// userRoutes.delete("/:id", deleteuser);
 
-module.exports = userRoutes;
+// module.exports = userRoutes;
