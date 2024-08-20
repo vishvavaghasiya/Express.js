@@ -1,6 +1,6 @@
-const mongoose = require('mongoose')
+const mongoose = require ('mongoose');
 
- const userSchema = mongoose.Schema({
+ const productSchema = mongoose.Schema({
     firstName: String ,       // short heand method
     lastName:{
          type: String,
@@ -26,4 +26,4 @@ const mongoose = require('mongoose')
     timestamps:true
  });
 
- module.exports = mongoose.model('users' ,userSchema);
+ module.exports = mongoose.model('product', productSchema);
